@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->dateTime("payment_date");
-            $table->string("payment_method")->nullable();
-            $table->foreignId("employee_id")->constrained("employees")->onDelete("cascade");
             $table->foreignId("payroll_id")->constrained("payrolls")->onDelete("cascade");
+            $table->decimal("amount",12,2);
+            $table->string("payment_method");
+            $table->foreignId("employee_id")->constrained("employees")->onDelete("cascade");
             $table->timestamps();
         });
     }

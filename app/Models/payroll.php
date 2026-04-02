@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class payroll extends Model
 {
     //
+    protected $fillable = [
+        "year",
+        "month",
+        "school_id",
+    ];
 }
