@@ -17,4 +17,7 @@ class department extends Model
   public function school(){
     return $this->belongsTo(school::class);
   }
+  public function employees(){
+    return $this->hasManyThrough(employee::class,designation::class);
+  }
 }

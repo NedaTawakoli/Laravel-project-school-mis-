@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User;
 
 class school extends Model
 {
@@ -21,4 +22,11 @@ class school extends Model
     public function designation(){
         return $this->through("departments")->has("designation");
     }
+    public function payrool(){
+        return $this->hasMany(payroll::class);
+    }
+    public function user(){
+        return $this->belongsTo(User::class,'schoolusers');
+    }
+
 }

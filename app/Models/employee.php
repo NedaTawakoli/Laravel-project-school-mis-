@@ -15,6 +15,5 @@ class employee extends Model
         "phone_number",
         "designation_id",
         "email",
-        ""
     ];
 }
