@@ -12,6 +12,12 @@ class payment extends Model
         "employee_id",
         "amount",
         "payroll_id",
-        "payment_date",
+        "payment_date", 
     ];
+    public function employee(){
+     return $this->belongsTo(employee::class);
+    }
+    public function payroll(){
+        return $this->belongsTo(payroll::class);
+    }
 }

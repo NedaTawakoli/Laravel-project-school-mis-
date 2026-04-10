@@ -18,6 +18,7 @@ class department extends Model
     return $this->belongsTo(school::class);
   }
   public function employees(){
-    return $this->hasManyThrough(employee::class,designation::class);
+    return $this->through("designation")->has('employees');
+    // return $this->hasManyThrough(employee::class,designation::class);
   }
 }
