@@ -13,12 +13,12 @@ new class extends Component
     <h1> Sharifi High School</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur blanditiis ad ab sed velit! Enim consequuntur in adipisci quos a consequatur optio iusto, qui quasi. Vitae accusantium labore corporis eos.</p>
     <div class="grid w-full grid-cols-3">
-        <div>
-            <h1>Manager</h1>
-            <h2>Esmatullah Ghulami</h2>
+        <div class="col-span-2">
+            <h1 class="text-blue-800 text-3xl">Manager</h1>
+            <h2 class="text-4xl text-blue-800 ">Esmatullah Ghulami</h2>
             <h3></h3>
         </div>
-        <img src="images/a3.jpg" alt="">
+        <img class="w-full h-44 border-4 border-gray-300" src="images/a3.jpg" alt="">
     </div>
     </div>
     <div class="w-full grid grid-cols-3 gap-2">
