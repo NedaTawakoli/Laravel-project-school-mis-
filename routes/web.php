@@ -3,18 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
-
+Route::view("dashboard",'dashboard')->middleware(['auth','verified'])->name("dashboard");
+Route::view("profile",'profile')->middleware(['auth','verified'])->name("profile");
 Route::prefix("dashboard")->middleware(['auth', 'verified'])->group(function(){
- Route::view("employee",'components.employee.⚡index');
- Route::view("contract",'component.contract');
- Route::view("school",'component.school');
- Route::view("department",'component.department');
- Route::view("designation",'component.designation');
- Route::view("payment",'component.payment');
- Route::view("payroll",'component.payroll');
- Route::view("salary",'component.salary');
- Route::view("/",'dashboard');
- Route::view('profile', 'profile');
+Route::view("school",'livewire.school.index');
+Route::view("designatio",'livewire.designation.index');
+Route::view("contract",'livewire.contract.index');
+Route::view("department",'livewire.department.index');
+Route::view("salary",'livewire.salary.index');
+Route::view("payment",'livewire.payment.index');
+Route::view("payroll",'livewire.payroll.index');
+Route::view("employee",'livewire.employee.index');
 });
 
 require __DIR__.'/auth.php';

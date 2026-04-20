@@ -17,18 +17,19 @@
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     </head>
     <body class="antialiased font-sans">
-       <div class="w-full relative bg-gray-200 min-h-screen">
-             <header class="w-full justify-between items-center py-4 px-8 fixed top-0 left-0 bg-gray-200 backdrop-blur-md after:content[''] after:absolute after:bottom-0 after:w-full after:h-px after:z-50 after:bg-black ">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <h1>Logo</h1>
-        </div>
-        @if (Route::has('login'))
+       <div style="width:100%;display:flex;height: 100vh; flex-direction: column; background-color: snow">
+             <header style="width:100%;marging:10px auto; justify-content: space-between; background-color:rgb(230, 221, 221);display:flex;gap:20px;border-bottom:1px solid rgb(201, 197, 197);background-attachment: fixed;">
+                        <div style="padding:5px 20px;justify-content: center;gap:10px">
+                            <h1 style="padding:5px 20px;">Logo</h1>
+                        </div>
+                            @if (Route::has('login'))
         <livewire:welcome.navigation />
  @endif
  </header>
  <div class="mt-21">
     <livewire:hero/>
     <livewire:feture/>
+    {{-- @livewire('feture') --}}
  </div>
        </div>
     </body>
